@@ -83,6 +83,9 @@ const Header: React.FC = () => {
         <Link to="/track-order" className={styles.link} onClick={toggleMenu}>
           Track Order
         </Link>
+        <Link to="/login" className={styles.link} onClick={toggleMenu}>
+          Login / SignUp
+        </Link>
       </nav>
       {!user && (
         <Link to="/login" style={{ textDecoration: "none", color: "inherit" }}>
