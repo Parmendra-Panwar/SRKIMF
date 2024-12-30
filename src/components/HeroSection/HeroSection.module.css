@@ -1,0 +1,148 @@
+.hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+  z-index: -1; 
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slowZoom 20s infinite;
+  transition: background-image 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+@keyframes slowZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: 0 6rem;
+  position: relative;
+}
+
+.content {
+  color: white;
+  max-width: 600px;
+}
+
+.tagline {
+  color: red;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: red;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #e40202;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff0000;
+  transform: scale(1.1);
+} 
+.videoPlay {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .overlay{
+    padding: 0 20px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .ctaButton {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .description {
+    font-size: 0.8rem;
+  }
+  .ctaButton {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+  }
+}

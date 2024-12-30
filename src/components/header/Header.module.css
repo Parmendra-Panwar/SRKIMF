@@ -1,0 +1,185 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem; /* Increased height */
+  background-color: rgba(0, 0, 0, 0.749); /* Darker black theme */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  background-color: #080808;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.8rem; /* Slightly larger for emphasis */
+  font-weight: bold;
+  color: white; /* Red theme */
+  text-transform: uppercase;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.link {
+  text-decoration: none;
+  color: white; /* White font color */
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link:hover {
+  color: red; /* Red hover color */
+}
+
+/* Underline animation */
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  left: -5px;
+  background-color: black; /* Black dropdown background */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  width: 220px;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.dropdownItem {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  color: white; /* White text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: red; /* Red hover effect */
+  color: black;
+}
+
+.ctaButton {
+  padding: 12px 24px; /* Slightly larger button */
+  background-color: #b30202; /* Red background */
+  color: white; /* White font */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff0000; /* Lighter red on hover */
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE DESIGN */
+.togglerBtn {
+  margin-right: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  display: none;
+}
+
+.chamchamchampa {
+  width: 20px;
+  height: 4px;
+  background-color: white; /* White lines for toggle */
+  border-radius: 3px;
+  margin-bottom: 2px;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .chamchamchampa {
+    display: block;
+  }
+
+  .togglerBtn {
+    display: block;
+    cursor: pointer;
+    z-index: 15;
+  }
+
+  .nav.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: black; /* Black background for mobile nav */
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 5;
+  }
+
+  .dropdownMenu {
+    display: none;
+  }
+
+  .dropdown.showDropdown .dropdownMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .ctaButton {
+    display: none;
+  }
+}

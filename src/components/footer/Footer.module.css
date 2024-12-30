@@ -1,0 +1,185 @@
+.footer {
+  background: linear-gradient(to bottom, #000, #8b0000);
+  color: white;
+  padding: 50px 40px;
+  font-family: Arial, sans-serif;
+  min-height: 50vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; 
+}
+
+.column {
+  flex: 1;
+  min-width: 220px; 
+}
+
+.logo {
+  font-size: 28px; 
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 15px; 
+  line-height: 1.6;
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin-top: 5px;
+  transition: width 0.3s ease;
+}
+
+.sectionTitle:hover::after {
+  width: 100px;
+}
+
+.animatedList {
+  list-style: none;
+  padding: 0;
+}
+
+.animatedList li {
+  margin-bottom: 12px;
+}
+
+.animatedList li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.animatedList li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+.animatedList li a:hover {
+  color: #ffcccc;
+}
+
+.animatedList li a:hover::after {
+  width: 100%;
+}
+
+.subscribe {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: transform 0.3s ease;
+  min-width: 200px; 
+}
+
+.subscribe button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe input:focus {
+  transform: scale(1.05);
+}
+
+.subscribe button:hover {
+  background-color: #ff3333;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-start; 
+}
+
+.socialIcons a {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+  background-color: #ff3333;
+  transform: scale(1.1);
+}
+
+.socialIcons svg {
+  font-size: 16px;
+}
+
+/* Footer Bottom */
+.footerBottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px; 
+  }
+
+  .subscribe {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+
+  .socialIcons {
+      justify-content: center;
+  }
+}

@@ -1,0 +1,66 @@
+.wrapper {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #080808;
+}
+
+.heading {
+  font-size: 38px;
+  font-weight: bold;
+  color: #fff; /* White text for the heading */
+  margin-bottom: 24px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(255, 0, 0, 0.2); 
+  background: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(255, 0, 0, 0.4); /* More intense red shadow on hover */
+}
+
+.cardImage {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 16px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000; /* Red text for the title */
+  margin-bottom: 8px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #333; /* Black text for the description */
+  margin-bottom: 12px;
+}
+
+.cardTagline {
+  font-size: 13px;
+  color: #555; /* Grey text for the tagline */
+  font-style: italic;
+  text-align: right;
+}

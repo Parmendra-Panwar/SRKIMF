@@ -1,0 +1,67 @@
+.container {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 800px;
+  background-color: #080808; /* Dark background for the container */
+  color: #ddd; /* Light text color */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for a cohesive theme */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #e63946; /* Primary accent color */
+}
+
+.subheading {
+  font-size: 1rem;
+  color: #ddd; /* Muted light color for secondary text */
+}
+
+.highlight {
+  color: #e63946; /* Use the accent color for highlights */
+  font-weight: bold;
+}
+
+.content {
+  line-height: 1.8; /* Match the line height with the theme */
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: #e63946; /* Use accent color for section titles */
+  margin-top: 20px;
+}
+
+.text {
+  font-size: 1rem;
+  color: #ddd; /* Maintain consistency with text color */
+  margin-bottom: 10px;
+}
+
+.list {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #ddd; /* List text matches the theme */
+}
+
+.contact {
+  font-size: 1rem;
+  color: #ddd; /* Consistent color for contact text */
+  margin-top: 10px;
+}
+
+.link {
+  color: #e63946; /* Accent color for links */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

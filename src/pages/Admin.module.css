@@ -1,0 +1,40 @@
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin-bottom: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.message {
+  margin-top: 10px;
+  color: red;
+}
+
+.adminData {
+  margin-top: 20px;
+  text-align: left;
+}

@@ -1,0 +1,123 @@
+
+.container {
+  background-color: #080808;
+  color: #ddd;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  color: #e63946; 
+  margin-bottom: 40px;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.serviceCard {
+  background-color: #333;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.serviceCard:hover {
+  background-color: #e63946;
+  transform: translateY(-10px);
+  color: #fff;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.serviceTitle {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.serviceDescription {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.terms, .priceCalculator {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.terms {
+  font-weight: bold;
+}
+
+.contactButton {
+  background-color: #222;
+  color: #e63946;
+  border: 2px solid #e63946;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  background-color: #e63946;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .serviceTitle {
+    font-size: 2rem;
+  }
+
+  .serviceDescription, .terms, .priceCalculator {
+    font-size: 1rem;
+  }
+
+  .contactButton {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .serviceTitle {
+    font-size: 1.8rem;
+  }
+
+  .serviceDescription, .terms, .priceCalculator {
+    font-size: 0.9rem;
+  }
+
+  .contactButton {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}

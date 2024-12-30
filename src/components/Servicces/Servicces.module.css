@@ -1,0 +1,187 @@
+.mainHeading {
+  width: 100%;
+  background-color: #080808;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subMainHeading {
+  height: 220px;
+  width: 180px;
+  color: #f5f5dc;
+  border: 1px solid #8b0000;
+  padding: 20px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: 'arial', sans-serif;
+  background-image: linear-gradient(
+    to top,
+    transparent,
+    transparent 50%,
+    #080808 50%,
+    #8b0000
+  );
+  background-position: 0 100%;
+  background-size: 100% 200%;
+  transition: all 0.5s ease-in;
+}
+
+.subMainHeading:hover {
+  background-position: 0 0;
+}
+
+.cttitle {
+  color: #f5f5dc;
+  transition: color 0.5s ease-in;
+}
+
+.subMainHeading:hover .cttitle {
+  color: rgb(250, 25, 25);
+}
+
+.icon {
+  color: rgb(250, 25, 25);
+}
+
+.whatwedo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.whatwedoImg {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+.whatwedoText {
+  color: #f5f5dc;
+  width: 350px;
+}
+
+.ctaButton {
+  padding: 12px 24px;
+  background-color: #b30202;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background-color: #ff0000;
+  transform: scale(1.05);
+}
+
+/* Mobile and tablet responsive styles */
+@media (max-width: 1024px) {
+  .mainHeading {
+    align-items: center;
+  }
+
+  .subMainHeading {
+    height: 200px;
+    width: 200px;
+    padding: 15px;
+  }
+
+  .whatwedo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .whatwedoImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .whatwedoText {
+    width: 90%;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smaller tablet and mobile responsive styles */
+@media (max-width: 768px) {
+  .mainHeading {
+    gap: 20px;
+    align-items: center;
+  }
+
+
+  .cttitle {
+    font-size: 14px;
+  }
+
+  .whatwedo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .whatwedoImg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .whatwedoText {
+    width: 90%;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile and very small screens responsive styles */
+@media (max-width: 480px) {
+  .mainHeading {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .subMainHeading {
+    width: 80%;
+    height: 160px;
+  }
+
+  .cttitle {
+    font-size: 12px;
+  }
+
+  .whatwedo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .whatwedoImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .whatwedoText {
+    width: 90%;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
