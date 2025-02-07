@@ -7,12 +7,12 @@ Follow these steps to configure your system:
 
 2. Run the following command to navigate to the `drivers/etc` directory: 
 
-### `cd drivers/etc`
+   - ### `cd drivers/etc`
 
 3. Run the following command to open the `hosts` file in Notepad:
 
-### `notepad hosts`
+   - ### `notepad hosts`
 
 4. Change the following lines to the end of the file: 
 
-### change `localhost` to `dev.medorn.com`
+   - ### change `localhost` to `dev.medorn.com`
